@@ -15,12 +15,6 @@ type produto struct {
 	Quantidade int
 }
 
-type Produto interface {
-	novoProduto(nome string, preco float64) produto
-	adicionarProduto(usuario *usuario, produto produto, quantidade int)
-	deletarProduto(usuario *usuario)
-}
-
 func novoProduto(nome string, preco float64) produto {
 	return produto{
 		Nome:  nome,

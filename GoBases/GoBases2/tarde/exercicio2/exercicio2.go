@@ -14,11 +14,11 @@ type Loja struct {
 	Produtos []Produto
 }
 
-type ProdutoInterface interface {
+type IProduto interface {
 	CalcularCusto() float64
 }
 
-type EcommerceInterface interface {
+type IEcommerce interface {
 	Total() float64
 	Adicionar(Produto)
 }
@@ -55,7 +55,7 @@ func novoProduto(tipo, nome string, preco float64) Produto {
 	}
 }
 
-func novaLoja() EcommerceInterface {
+func novaLoja() IEcommerce {
 	return &Loja{}
 }
 

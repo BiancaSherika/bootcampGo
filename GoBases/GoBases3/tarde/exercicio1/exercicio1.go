@@ -10,13 +10,6 @@ type pessoa struct {
 	senha     string
 }
 
-type Pessoa interface {
-	mudarNome(nome string, sobrenome string)
-	mudarIdade(idade int)
-	mudarEmail(email string)
-	mudarSenha(senha string)
-}
-
 func (p *pessoa) mudarNome(nome string, sobrenome string) {
 	p.nome = nome
 	p.sobrenome = sobrenome
